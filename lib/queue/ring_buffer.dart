@@ -42,6 +42,7 @@ class RingBuffer<E> {
       }
       text.write(_list[index % _list.length]);
       index++;
+      index %= _list.length;
     }
     text.write(']');
     return text.toString();
