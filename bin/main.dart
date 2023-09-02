@@ -1,3 +1,4 @@
+import 'package:dsa_dart/tree/challenges/print_in_level_order.dart';
 import 'package:dsa_dart/tree/tree.dart';
 
 TreeNode<String> makeBeverageTree() {
@@ -33,9 +34,5 @@ TreeNode<String> makeBeverageTree() {
 void main() {
   final tree = makeBeverageTree();
 
-  final searchResult1 = tree.search('ginger ale');
-  print(searchResult1?.value);
-
-  final searchResult2 = tree.search('water');
-  print(searchResult2?.value);
+  printEachLevel(tree);
 }

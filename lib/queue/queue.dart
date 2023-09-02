@@ -114,6 +114,8 @@ class QueueStack<E> implements Queue<E> {
           ? _rightStack.first
           : _leftStack.last;
 
+  int get length => _leftStack.length + _rightStack.length;
+
   @override
   String toString() {
     final combined = [
