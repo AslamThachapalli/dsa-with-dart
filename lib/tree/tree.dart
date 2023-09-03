@@ -15,7 +15,8 @@ class TreeNode<T> {
   // There are multiple ways to traverse a tree, each approach depends on our
   // specific requirements.
 
-  /// Depth-First Traversal
+  /// [Depth-First Traversal]
+  ///
   /// This technique starts at the root and visits nodes as deep as it can before backtracking.
   void forEachDepthFirst(void Function(TreeNode<T> node) performAction) {
     performAction(this);
@@ -24,7 +25,8 @@ class TreeNode<T> {
     }
   }
 
-  /// Level-Order Traversal
+  /// [Level-Order Traversal]
+  ///
   /// A tree can be divided into levels based on the distance of the nodes from the root.
   /// A level-order traversal means that you visit all of the nodes at an upper level before
   /// visiting any of the nodes at the next level down.
