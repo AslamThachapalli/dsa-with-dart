@@ -1,4 +1,5 @@
 import 'package:dsa_dart/binary_tree/binary_node.dart';
+import 'package:dsa_dart/binary_tree/challenges/height_of_tree.dart';
 
 BinaryNode<int> createBinaryTree() {
   final zero = BinaryNode(0);
@@ -18,5 +19,5 @@ BinaryNode<int> createBinaryTree() {
 void main() {
   final tree = createBinaryTree();
 
-  print(tree);
+  print(getHeightOfTree(tree));
 }
