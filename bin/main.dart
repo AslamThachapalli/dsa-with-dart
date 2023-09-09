@@ -1,5 +1,5 @@
 import 'package:dsa_dart/binary_tree/binary_node.dart';
-import 'package:dsa_dart/binary_tree/challenges/height_of_tree.dart';
+import 'package:dsa_dart/binary_tree/challenges/serialization.dart';
 
 BinaryNode<int> createBinaryTree() {
   final zero = BinaryNode(0);
@@ -19,5 +19,12 @@ BinaryNode<int> createBinaryTree() {
 void main() {
   final tree = createBinaryTree();
 
-  print(getHeightOfTree(tree));
+  print(tree);
+  final serialized = serialize(tree);
+  print("serialized list: $serialized \n");
+
+  final deTree = deSerialize(serialized);
+
+  print("Deserialized tree");
+  print("$deTree");
 }
