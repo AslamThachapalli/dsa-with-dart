@@ -1,22 +1,27 @@
-import 'package:dsa_dart/binary_search_tree/binary_search_tree.dart';
+import 'package:dsa_dart/binary_search_tree/challenges/is_bst.dart';
+import 'package:dsa_dart/binary_tree/binary_node.dart';
 
-BinarySearchTree<int> buildExampleTree() {
-  var tree = BinarySearchTree<int>();
-  tree.insert(3);
-  tree.insert(1);
-  tree.insert(4);
-  tree.insert(0);
-  tree.insert(2);
-  tree.insert(5);
-  return tree;
+BinaryNode<int> buildExampleTree() {
+  final three = BinaryNode(3);
+  final one = BinaryNode(1);
+  final four = BinaryNode(4);
+  final zero = BinaryNode(0);
+  final two = BinaryNode(2);
+  final five = BinaryNode(5);
+
+  three.leftChild = one;
+  three.rightChild = four;
+
+  one.leftChild = zero;
+  one.rightChild = two;
+
+  four.rightChild = five;
+
+  return three;
 }
 
 void main() {
   final tree = buildExampleTree();
 
-  print('Tree before removal:');
-  print(tree);
-  tree.remove(3);
-  print('Tree after removing root:');
-  print(tree);
+  print(tree.isBinarySearchTree());
 }

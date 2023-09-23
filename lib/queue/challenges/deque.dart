@@ -5,7 +5,6 @@
 //Build a deque
 
 import 'package:dsa_dart/linkedList/linked_list.dart';
-import 'package:dsa_dart/stack/stack.dart';
 
 enum Direction {
   front,
